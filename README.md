@@ -35,6 +35,11 @@ pip install -r requirements.txt
 ## Usage
 To run `lesson-one.py`, use the following command:
 ```bash
-python src/quick-start/lesson-one.py
+python src/quick-start/lesson_one.py
 ```
 Same way you can run other scripts in the `src/quick-start` folder.
+
+Once you're done exploring, you can deactivate the virtual environment with:
+```bash
+deactivate
+```
