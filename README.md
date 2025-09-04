@@ -43,3 +43,12 @@ Once you're done exploring, you can deactivate the virtual environment with:
 ```bash
 deactivate
 ```
+## Formatting
+To format the code, use the `ruff` command. Here's an example command to format a specific file:
+```bash
+ruff format ./src/introduction/01-asst-agent/example_03_streaming_msg.py
+```
+For linting, you can use the `pylint` command. Here's an example command to lint a specific file:
+```bash
+pylint ./src/introduction/01-asst-agent/example_03_streaming_msg.py
+```
