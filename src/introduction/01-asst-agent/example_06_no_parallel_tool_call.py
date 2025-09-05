@@ -1,9 +1,5 @@
 """
-Example demonstrating the creation and use of an AssistantAgent with Azure OpenAI integration.
-
-This script sets up an AssistantAgent capable of answering queries using a mock web search tool.
-It authenticates with Azure OpenAI services using Azure AD credentials, loads environment variables,
-and streams responses to the console.
+Example demonstrating disabling parallel tool call.
 
 Dependencies:
 - autogen_agentchat
@@ -12,7 +8,7 @@ Dependencies:
 - dotenv
 
 Usage:
-    python src/introduction/01-agent/example_01_asst_agent.py
+    uv run src/introduction/01-asst-agent/example_06_no_parallel_tool_call.py
 """
 
 import asyncio
@@ -31,7 +27,7 @@ load_dotenv()
 # For simplicity, we will use a mock function here that returns a static string.
 async def web_search(query: str) -> str:
     """Find information on the web"""
-    return "AutoGen is a programming framework for building multi-agent applications."
+    return "Tintin is a comic character created by Belgian cartoonist Hergé."
 
 
 # Create the token provider
@@ -46,6 +42,7 @@ model_client = AzureOpenAIChatCompletionClient(
     api_version=os.environ.get("AZURE_OPENAI_API_VERSION"),
     azure_endpoint=os.environ.get("AZURE_OPENAI_API_INSTANCE_NAME"),
     azure_ad_token_provider=token_provider,
+    parallel_tool_calls=False,
 )
 
 agent = AssistantAgent(
@@ -58,11 +55,13 @@ agent = AssistantAgent(
 
 async def main():
     """
-    Asynchronously runs the AssistantAgent to find information on AutoGen and prints the agent's messages.
+    Asynchronously runs the AssistantAgent to find information on Tintin and
+    prints the agent's messages.
 
-    This function sends a task to the agent, prints the resulting messages, and closes the model client connection.
+    This function sends a task to the agent, prints the resulting messages, and
+    closes the model client connection.
     """
-    result = await agent.run(task="Find information on AutoGen")
+    result = await agent.run(task="Find information on Tintin")
     print(result.messages)
     await model_client.close()
 

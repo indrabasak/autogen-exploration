@@ -10,7 +10,7 @@ Dependencies:
 - autogen_core
 
 Usage:
-    python src/introduction/01-asst-agent/example_04_functional_tool.py
+    uv run src/introduction/01-asst-agent/example_04_functional_tool.py
 """
 
 from autogen_core.tools import FunctionTool

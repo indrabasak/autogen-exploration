@@ -15,7 +15,7 @@ Dependencies:
 - dotenv
 
 Usage:
-python src/introduction/02-agent/example_02_multimodal_msg.py
+uv run src/introduction/01-asst-agent/example_02_multimodal_msg.py
 """
 
 import asyncio
