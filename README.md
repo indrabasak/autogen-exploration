@@ -19,36 +19,24 @@ AZURE_TENANT_ID=<TENANT ID>
 AZURE_CLIENT_ID=<CLIENT ID>
 AZURE_CLIENT_SECRET=<CLIENT SECRET>
 ```
- - Create a virtual environment to manage dependencies
+ - This project uses `uv`, a Python package and project manager, to manage dependencies and run scripts. 
+Make sure you have `uv` installed.
 
-```bash
-python3 -m venv venv
-```
-  - Activate the virtual environment
-```bash
-source venv/bin/activate  
-```
-  - Install the required packages listed in `requirements.txt` file
-```bash
-pip install -r requirements.txt
 ```
 ## Usage
 To run `lesson-one.py`, use the following command:
 ```bash
-python src/quick-start/lesson_one.py
+uv run src/quick-start/lesson_one.py
 ```
 Same way you can run other scripts in the `src/quick-start` folder.
 
-Once you're done exploring, you can deactivate the virtual environment with:
-```bash
-deactivate
 ```
 ## Formatting
 To format the code, use the `ruff` command. Here's an example command to format a specific file:
 ```bash
-ruff format ./src/introduction/01-asst-agent/example_03_streaming_msg.py
+uv run ruff format ./src/introduction/01-asst-agent/example_03_streaming_msg.py
 ```
 For linting, you can use the `pylint` command. Here's an example command to lint a specific file:
 ```bash
-pylint ./src/introduction/01-asst-agent/example_03_streaming_msg.py
+uv run pylint ./src/introduction/01-asst-agent/example_03_streaming_msg.py
 ```

@@ -1,0 +1,15 @@
+[project]
+name = "autogen-exploration"
+version = "0.1.0"
+description = "Exloring the capabilities of AutoGen"
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [
+    {name = "Indra Basak", email = "indra.basak1@gmail.com"}
+]
+dependencies = [
+    "autogen-agentchat>=0.7.4",
+    "autogen-ext[azure,mcp,openai]>=0.7.4",
+    "pylint>=3.3.8",
+    "ruff>=0.12.12",
+]
