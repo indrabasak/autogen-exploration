@@ -22,7 +22,6 @@ AZURE_CLIENT_SECRET=<CLIENT SECRET>
  - This project uses `uv`, a Python package and project manager, to manage dependencies and run scripts. 
 Make sure you have `uv` installed.
 
-```
 ## Usage
 To run `lesson-one.py`, use the following command:
 ```bash
@@ -30,12 +29,13 @@ uv run src/quick-start/lesson_one.py
 ```
 Same way you can run other scripts in the `src/quick-start` folder.
 
-```
 ## Formatting
 To format the code, use the `ruff` command. Here's an example command to format a specific file:
+
 ```bash
 uv run ruff format ./src/introduction/01-asst-agent/example_03_streaming_msg.py
 ```
+
 For linting, you can use the `pylint` command. Here's an example command to lint a specific file:
 ```bash
 uv run pylint ./src/introduction/01-asst-agent/example_03_streaming_msg.py
