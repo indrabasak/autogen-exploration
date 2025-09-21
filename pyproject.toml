@@ -9,7 +9,7 @@ authors = [
 ]
 dependencies = [
     "autogen-agentchat>=0.7.4",
-    "autogen-ext[azure,mcp,openai]>=0.7.4",
+    "autogen-ext[azure,magentic-one,mcp,openai]>=0.7.4",
     "pylint>=3.3.8",
     "python-dotenv>=1.1.1",
     "ruff>=0.12.12",
