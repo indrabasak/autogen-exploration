@@ -9,8 +9,14 @@ authors = [
 ]
 dependencies = [
     "autogen-agentchat>=0.7.4",
-    "autogen-ext[azure,magentic-one,mcp,openai]>=0.7.4",
+    "autogen-ext[azure,langchain,magentic-one,mcp,openai]>=0.7.4",
+    "langchain-community>=0.3.30",
+    "langchain-experimental>=0.3.4",
+    "langchain-openai>=0.3.34",
+    "pandas>=2.3.2",
     "pylint>=3.3.8",
+    "pymysql>=1.1.2",
     "python-dotenv>=1.1.1",
     "ruff>=0.12.12",
+    "sqlalchemy>=2.0.43",
 ]
