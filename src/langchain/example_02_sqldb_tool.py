@@ -94,7 +94,8 @@ async def main():
 
     # Run the chat.
     # await Console(chat.run_stream(task="Show some tables in the database"))
-    task = 'What prices are there for the offering with id OD-000163, direct, BIC; Please provide the SQL query used.'
+    # task = 'What prices are there for the offering with id OD-000163, direct, BIC; Please provide the SQL query used.'
+    task = "What's the name of offering with id OD-127409?"
     await Console(chat.run_stream(task=task))
 
     await model_client.close()
